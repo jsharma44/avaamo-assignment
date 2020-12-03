@@ -1,0 +1,35 @@
+{
+  "name": "avaamo-assignment",
+  "version": "1.0.0",
+  "description": "Avaamo assignment",
+  "main": "dist/index.js",
+  "author": "Jai Sharma <jaiprakash.sharma44@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:babel": "NODE_ENV=production babel src --out-dir dist --extensions .js --source-maps inline",
+    "build": "yarn run clean && yarn run build:babel",
+    "start": "yarn run build && node dist/index.js",
+    "dev": " NODE_ENV=development nodemon --watch src -e js --exec babel-node ./src/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "cpy-cli": "^3.1.1",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0"
+  }
+}
