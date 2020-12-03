@@ -69,9 +69,8 @@ for more information see [package.json](./package.json)  or see following sripts
     "dev": " NODE_ENV=development nodemon --watch src -e js --exec babel-node ./src/index.js"
   }
 
-
-  #  You can find a live version here on heroku.
-
-
-
 ```
+
+  #  PS
+
+  Response time is around 3-8 ms as this is assigment so i havent put all effort. Thanks
